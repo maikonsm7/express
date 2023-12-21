@@ -15,6 +15,10 @@ app.use((req, res) => {
     console.log('Fim')
 })
 
+app.get('/cliente/:id', (req, res) => {
+    res.send(`cliente ${req.params.id} selecionado!`)
+})
+
 app.listen(porta, () => {
     console.log(`Executando servidor na porta ${porta}`)
 })
